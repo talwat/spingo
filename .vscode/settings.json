@@ -4,6 +4,7 @@
         "asciinema",
         "exhaustivestruct",
         "forbidigo",
+        "golangci",
         "golint",
         "interfacer",
         "nolint",

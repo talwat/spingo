@@ -17,7 +17,7 @@ func Test(t *testing.T) {
 		t.Errorf("Expected spinner.ArtIndex to be 1, got %d", spinner.ArtIndex)
 	}
 
-	for i := 0; i <= 100000; i++ {
+	for i := 0; i <= 100; i++ {
 		spinner.DisplaySpinner()
 	}
 }
