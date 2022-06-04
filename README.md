@@ -9,6 +9,8 @@
 
 SpinGO is a very basic library for making progress spinners which has no dependencies.
 
+SpinGO is single threaded and meant to be used as a **progress indicator**, there are other good libraries if you want the spinner to display no matter what's going on.
+
 ## Table of contents
 
 - [SpinGO](#spingo)
