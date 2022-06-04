@@ -34,6 +34,7 @@ func (spinner *Spinner) DisplaySpinner() {
 		spinner.SpinnerArt = []string{"/", "|", "\\", "-"}
 	}
 
+	// Erase line, move to beginning of the line, and print the prefix, spinner & suffix
 	fmt.Print("\x1b[2K\r" + spinner.Prefix + spinner.SpinnerArt[spinner.ArtIndex] + spinner.Suffix)
 
 	spinner.ArtIndex += 1

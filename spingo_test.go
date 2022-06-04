@@ -20,4 +20,6 @@ func Test(t *testing.T) {
 	for i := 0; i <= 100; i++ {
 		spinner.DisplaySpinner()
 	}
+
+	spinner.End()
 }
