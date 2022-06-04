@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"time"
 
 	"github.com/talwat/spingo"
@@ -41,7 +40,7 @@ func main() {
 			spinner.DisplaySpinner()
 			time.Sleep(time.Millisecond * 50)
 		}
-		fmt.Print("\n")
+		spinner.End()
 	}
 
 	displaySpin()
