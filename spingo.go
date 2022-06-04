@@ -10,9 +10,6 @@ type Spinner struct {
 	// Index of the current spinner art, it's fine to not set this when creating a new spinner.
 	ArtIndex int
 
-	// Whether the spinner has started spinning or not.
-	AlreadyStarted bool
-
 	// Prefix to display before the spinner.
 	Prefix string
 
@@ -37,13 +34,7 @@ func (spinner *Spinner) DisplaySpinner() {
 		spinner.SpinnerArt = []string{"/", "|", "\\", "-"}
 	}
 
-	// If the spinner has not started, erase the line
-	if !spinner.AlreadyStarted {
-		fmt.Print("\x1b[2K")
-		spinner.AlreadyStarted = true
-	}
-
-	fmt.Print("\r" + spinner.Prefix + spinner.SpinnerArt[spinner.ArtIndex] + spinner.Suffix)
+	fmt.Print("\x1b[2K\r" + spinner.Prefix + spinner.SpinnerArt[spinner.ArtIndex] + spinner.Suffix)
 
 	spinner.ArtIndex += 1
 
